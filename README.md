@@ -7,6 +7,8 @@ Main page to show my work, made in <b>React JS</b>,
 
 It contains a selection of projects on the same page with a small description, when you hold the mouse over it.
 In the navigation bar sections, you can also access the projects as external urls, my downloadable CV and a simple contact form. 
+
+It allows filtering by technology. As I include more projects, this functionality will become more useful.
 ___
 ### Esp:
 
