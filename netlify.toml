@@ -1,0 +1,6 @@
+[build]
+  dist = "public"
+  command = "yarn build"
+
+[functions]
+  directory = "functions"

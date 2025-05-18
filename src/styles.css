@@ -1,0 +1,113 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.page-content {
+    overflow: hidden;
+}
+
+button {
+    margin-right: 10px;
+}
+
+a {
+    margin-right: 5px;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.btn-custom-outline {
+    border-width: 2px;
+    border-color: #5a5a5a;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.btn-custom-outline.selected {
+    border-color: #2E003E;
+    background-color: #2E003E;
+
+}
+
+.btn-custom-outline:hover {
+    border-color: #2e003e7c;
+    background-color: #2e003e7c;
+}
+
+.btn-navbar-purple {
+    border: 2px solid #2E003E;
+    background-color: transparent;
+    color: #2E003E;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-navbar-purple:hover {
+    background-color: #2E003E;
+    color: white;
+    border-color: #2E003E;
+}
+
+canvas {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+.scroll-bootstrap::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-bootstrap::-webkit-scrollbar-thumb {
+    background-color: #2e003e7c;
+    border-radius: 10px;
+}
+.scroll-bootstrap {
+    scrollbar-width: thin;
+    scrollbar-color: #2e003e7c #f8f9fa;
+}
+
+@media (max-width: 350px) {
+    .btn-custom-outline {
+        padding: 4px 8px;
+        font-size: 12px;
+        border-width: 1px;
+    }
+}
