@@ -3,4 +3,4 @@
   command = "yarn build"
 
 [functions]
-  directory = "functions"
+  directory = "netlify/functions"

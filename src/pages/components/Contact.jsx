@@ -21,23 +21,19 @@ export const Contact = () => {
     setStatus(null);
 
     try {
-    //   const response = await fetch("http://localhost:3001/api/contact", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(formData),
-    //   });
-    const response = await fetch("/.netlify/functions/contact", {
+      //   const response = await fetch("http://localhost:3001/api/contact", {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     body: JSON.stringify(formData),
+      //   });
+      const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: nombre,
-          email: correo,
-          subject: asunto,
-          message: mensaje,
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
+        alert("Correo enviado correctamente");
         setStatus("ok");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
@@ -60,7 +56,9 @@ export const Contact = () => {
               </h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="name" className="form-label">Nombre</label>
+                  <label htmlFor="name" className="form-label">
+                    Nombre
+                  </label>
                   <input
                     type="text"
                     className="form-control"
@@ -72,7 +70,9 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Correo electrónico</label>
+                  <label htmlFor="email" className="form-label">
+                    Correo electrónico
+                  </label>
                   <input
                     type="email"
                     className="form-control"
@@ -84,7 +84,9 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="subject" className="form-label">Asunto</label>
+                  <label htmlFor="subject" className="form-label">
+                    Asunto
+                  </label>
                   <input
                     type="text"
                     className="form-control"
@@ -96,7 +98,9 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="message" className="form-label">Mensaje</label>
+                  <label htmlFor="message" className="form-label">
+                    Mensaje
+                  </label>
                   <textarea
                     className="form-control"
                     id="message"
